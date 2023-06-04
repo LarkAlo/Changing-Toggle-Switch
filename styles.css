@@ -83,7 +83,7 @@ body:has(.switch__input:checked) {
 
 .switch__input:focus-visible {
   box-shadow: 0 0 0 0.125em hsl(var(--hue), 90%, 50%),
-    0.125em 0.125em 0.25em hsla(var(--hue), 90%, 10%, 0, 2);
+    0.125em 0.125em 0.25em hsla(var(--hue), 90%, 10%, 0.2);
 }
 
 .switch__input::before,
@@ -108,17 +108,18 @@ body:has(.switch__input:checked) {
 .switch__input:after {
   background-color: hsl(0, 0%, 100%);
   border-radius: 50%;
-  box-shadow: 0.05em 0.05em 0.05em hsla(var(--hue), 90%, 10%, 0.11);
+  box-shadow: 0.05em 0.05em 0.05em hsla(var(--hue), 90%, 10%, 0.1);
   top: 0.125em;
   left: 0.125em;
   width: 1.25em;
   height: 1.25em;
   transition: background-color var(--trans-dur) var(--trans-timing),
     transform var(--trans-dur) var(--trans-timing);
+  z-index: 1;
 }
 
 .switch__input:checked {
-  background-color: hsl(210, 90%, 40%);
+  background-color: hsl(290, 90%, 40%);
 }
 
 .switch__input:checked::before {
